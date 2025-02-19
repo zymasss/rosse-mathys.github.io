@@ -47,28 +47,28 @@ function eraseText() {
 function changeColor() {
     
     // Change la couleur de tous les éléments de classe "description"
-const descriptions = Array.from(document.getElementsByClassName("description"));
-descriptions.forEach(description => {
-    description.style.color = "#b74b4b"; // Change la couleur de chaque description en rouge
-});
-
-// Ajoute un event listener pour chaque élément de la classe "box"
-const boxes = Array.from(document.getElementsByClassName("box"));
-boxes.forEach(box => {
-    box.addEventListener("mouseover", function() {
-        const description = this.querySelector(".description");
-        if (description) {
-            description.style.color = "white"; // Change la couleur en blanc lors du survol
-        }
+    const descriptions = Array.from(document.getElementsByClassName("description"));
+    descriptions.forEach(description => {
+        description.style.color = "#b74b4b"; // Change la couleur de chaque description en rouge
     });
 
-    box.addEventListener("mouseout", function() {
-        const description = this.querySelector(".description");
-        if (description) {
-            description.style.color = "#b74b4b"; // Restaure la couleur originale
-        }
+    // Ajoute un event listener pour chaque élément de la classe "box"
+    const boxes = Array.from(document.getElementsByClassName("box"));
+    boxes.forEach(box => {
+        box.addEventListener("mouseover", function() {
+            const description = this.querySelector(".description");
+            if (description) {
+                description.style.color = "white"; // Change la couleur en blanc lors du survol
+            }
+        });
+
+        box.addEventListener("mouseout", function() {
+            const description = this.querySelector(".description");
+            if (description) {
+                description.style.color = "#b74b4b"; // Restaure la couleur originale
+            }
+        });
     });
-});
 }
 
 window.onload =function(){
