@@ -588,3 +588,32 @@ footer .text span a:hover{
   }
 }
 
+
+.toggle-btn {
+    display: flex;
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid #b74b4b;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.active {
+    background: #b74b4b;
+    color: black;
+}
+
+
