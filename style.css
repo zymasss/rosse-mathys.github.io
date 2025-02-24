@@ -144,10 +144,6 @@ section .main-container{
 
 .main-container .image {
     width: 500px;
-    height: 500px;
-    border-radius: 50%;  /* 100% peut être remplacé par 50% pour éviter des coupures trop sévères */
-    overflow: hidden;
-    box-shadow: 0 0 50px #b74b4b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -598,38 +594,4 @@ footer .text span a:hover{
         font-size: 50px;
         color: #b74b4b;
     }
-}
-
-
-/* Barre de sélection */
-.tab-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.tab-button {
-  background-color: #ccc;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
-}
-
-.tab-button.active {
-  background-color: #b74b4b;
-  color: white;
-}
-
-/* Conteneur des projets */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Cacher les projets inactifs */
-.hidden {
-  display: none;
 }
