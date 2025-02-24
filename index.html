@@ -181,81 +181,41 @@
       </div>
     </section>
 
+    <section>
+  <!-- Barre de sélection -->
+  <div class="tab-container">
+    <button class="tab-button active" onclick="showProjects('university')">University Projects</button>
+    <button class="tab-button" onclick="showProjects('personal')">Personal Projects</button>
+  </div>
 
-<body>
-    <div class="project-filter">
-        <button class="filter-btn active" data-filter="all"><i class="fas fa-list"></i> All Projects</button>
-        <button class="filter-btn" data-filter="university"><i class="fas fa-university"></i> University Projects</button>
-        <button class="filter-btn" data-filter="personal"><i class="fas fa-user"></i> Personal Projects</button>
+  <!-- Contenu des Projets Universitaires -->
+  <div id="university-projects" class="projects-container">
+    <div class="box">
+      <a href="https://zymasss.github.io/rosse-mathys.github.io/Dossier-Officiel-Sport-Romain-Mathys.html" target="_blank">
+        <div class="icon">
+          <i class="fas fa-desktop"></i>
+        </div>
+        <div class="topic">Student Analysis</div>
+        <p class="description">First Data Visualization and Statistics Project in 1 Week ...</p>
+      </a>
     </div>
+    <!-- Autres projets universitaires ici -->
+  </div>
 
-    <div class="boxes">
-        <div class="box university">
-            <a href="#">
-                <div class="icon"><i class="fas fa-desktop"></i></div>
-                <div class="topic">Student Analysis</div>
-                <p class="description">First Data Visualization and Statistics Project...</p>
-            </a>
+  <!-- Contenu des Projets Personnels -->
+  <div id="personal-projects" class="projects-container hidden">
+    <div class="box">
+      <a href="https://sqlsrs-mathysrosse.streamlit.app/" target="_blank">
+        <div class="icon">
+          <i class="fas fa-tablet-alt"></i>
         </div>
-        <div class="box university">
-            <a href="#">
-                <div class="icon"><i class="fas fa-paint-brush"></i></div>
-                <div class="topic">Textual statistics</div>
-                <p class="description">Analysis and textual statistics of French wines...</p>
-            </a>
-        </div>
-        <div class="box university">
-            <a href="#">
-                <div class="icon"><i class="fas fa-chart-line"></i></div>
-                <div class="topic">Spatial Econometrics</div>
-                <p class="description">Study of the spatial impact...</p>
-            </a>
-        </div>
-        <div class="box university">
-            <a href="#">
-                <div class="icon"><i class="fab fa-android"></i></div>
-                <div class="topic">Forecasting Stock Returns</div>
-                <p class="description">Estimation of an asset valuation model...</p>
-            </a>
-        </div>
-        <div class="box university">
-            <a href="#">
-                <div class="icon"><i class="fas fa-camera-retro"></i></div>
-                <div class="topic">Credit Risk Scoring</div>
-                <p class="description">Identifying factors that predict loan defaults...</p>
-            </a>
-        </div>
-        <div class="box personal">
-            <a href="#">
-                <div class="icon"><i class="fas fa-tablet-alt"></i></div>
-                <div class="topic">Interactive SQL Revision App</div>
-                <p class="description">Development of a Streamlit application...</p>
-            </a>
-        </div>
+        <div class="topic">Interactive SQL Revision App with Streamlit</div>
+        <p class="description">Development of a Streamlit application for SQL revision...</p>
+      </a>
     </div>
+  </div>
+</section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const buttons = document.querySelectorAll(".filter-btn");
-            const projects = document.querySelectorAll(".box");
-
-            buttons.forEach(button => {
-                button.addEventListener("click", function() {
-                    const filter = this.getAttribute("data-filter");
-                    buttons.forEach(btn => btn.classList.remove("active"));
-                    this.classList.add("active");
-                    projects.forEach(project => {
-                        if (filter === "all" || project.classList.contains(filter)) {
-                            project.style.display = "block";
-                        } else {
-                            project.style.display = "none";
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-</body>
 
 
 

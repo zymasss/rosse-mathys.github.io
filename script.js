@@ -76,5 +76,28 @@ window.onload =function(){
     typeWriter();
     changeColor();
 
-} 
+}
+
+
+
+function showProjects(category) {
+  // Sélectionner les éléments
+  const universityProjects = document.getElementById("university-projects");
+  const personalProjects = document.getElementById("personal-projects");
+  const buttons = document.querySelectorAll(".tab-button");
+
+  // Afficher/Cacher les projets en fonction du bouton cliqué
+  if (category === "university") {
+    universityProjects.classList.remove("hidden");
+    personalProjects.classList.add("hidden");
+  } else {
+    universityProjects.classList.add("hidden");
+    personalProjects.classList.remove("hidden");
+  }
+
+  // Mettre à jour le style des boutons actifs
+  buttons.forEach((button) => button.classList.remove("active"));
+  document.querySelector(`button[onclick="showProjects('${category}')"]`).classList.add("active");
+}
+
 
