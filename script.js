@@ -90,5 +90,38 @@ function toggleOption() {
 }
 
 
+/* mettre streamlit app en perso project sans retoucher à toutes les class */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const universityBtn = document.getElementById("university");
+    const personalBtn = document.getElementById("personal");
+    const boxes = document.querySelectorAll(".boxes .box");
+
+    function showProjects(type) {
+        boxes.forEach(box => {
+            const isPersonalProject = box.querySelector(".topic").innerText.includes("Interactive SQL Revision App with Streamlit");
+            if (type === "personal" && !isPersonalProject) {
+                box.style.display = "none";
+            } else {
+                box.style.display = "block";
+            }
+        });
+    }
+
+    universityBtn.addEventListener("click", function () {
+        universityBtn.classList.add("active");
+        personalBtn.classList.remove("active");
+        showProjects("university");
+    });
+
+    personalBtn.addEventListener("click", function () {
+        personalBtn.classList.add("active");
+        universityBtn.classList.remove("active");
+        showProjects("personal");
+    });
+
+    // Afficher tous les projets au chargement
+    showProjects("university");
+});
 
 
