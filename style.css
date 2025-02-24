@@ -567,24 +567,30 @@ footer .text span a:hover{
 }
 }
 
-@media (max-width: 500px){
-  main-container .image{
-        width: 50%;
-        height: 60%;
-        margin-bottom: 0px;
+@media (max-width: 500px) {
+  .main-container .image {
+        width: 80%;  /* Augmente la taille pour mieux s'adapter aux petits écrans */
+        height: 70%; /* Ajuste automatiquement la hauteur */
+        border-radius: 50%; /* Garde un effet arrondi */
+        margin-bottom: 20px;
     }
-    
-    .main-container .content{
-        width: 80%;
+
+    .main-container .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Évite les coupures et déformations */
     }
-    
-    .main-container button{
+
+    .main-container .content {
+        width: 90%;
+    }
+
+    .main-container button {
         margin-top: 15px;
     }
-  
-  .skills-details .boxes .per{
-    font-size: 50px;
-    color: #b74b4b;
-  }
-}
 
+    .skills-details .boxes .per {
+        font-size: 50px;
+        color: #b74b4b;
+    }
+}
