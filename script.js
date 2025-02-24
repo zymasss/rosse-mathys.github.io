@@ -95,15 +95,19 @@ function toggleOption() {
 document.addEventListener("DOMContentLoaded", function () {
     const universityBtn = document.getElementById("university");
     const personalBtn = document.getElementById("personal");
-    const boxes = document.querySelectorAll(".boxes .box");
+    const boxes = document.querySelectorAll(".box");
 
-    function showProjects(type) {
+    function filterProjects(category) {
         boxes.forEach(box => {
-            const isPersonalProject = box.querySelector(".topic").innerText.includes("Interactive SQL Revision App with Streamlit");
-            if (type === "personal" && !isPersonalProject) {
-                box.style.display = "none";
+            const projectTitle = box.querySelector(".topic").textContent;
+            const isPersonalProject = projectTitle.includes("Streamlit");
+
+            if (category === "University" && isPersonalProject) {
+                box.style.display = "none"; // Cache le projet Streamlit
+            } else if (category === "Personal" && !isPersonalProject) {
+                box.style.display = "none"; // Cache tous les autres projets
             } else {
-                box.style.display = "block";
+                box.style.display = "block"; // Affiche les projets correspondants
             }
         });
     }
@@ -111,17 +115,17 @@ document.addEventListener("DOMContentLoaded", function () {
     universityBtn.addEventListener("click", function () {
         universityBtn.classList.add("active");
         personalBtn.classList.remove("active");
-        showProjects("university");
+        filterProjects("University");
     });
 
     personalBtn.addEventListener("click", function () {
         personalBtn.classList.add("active");
         universityBtn.classList.remove("active");
-        showProjects("personal");
+        filterProjects("Personal");
     });
 
-    // Afficher tous les projets au chargement
-    showProjects("university");
+    // Afficher par défaut les projets universitaires
+    filterProjects("University");
 });
 
 
