@@ -79,7 +79,7 @@ window.onload =function(){
 }
 
 
-
+/* Bouton univ et perso */
 
 function toggleOption() {
     let university = document.getElementById("university");
