@@ -185,6 +185,29 @@
       </div>
     </section>
 
+      <!-- test -->
+
+    <div class="toggle-btn" onclick="toggleOption()">
+        <div id="university" class="option active">University Project</div>
+        <div id="personal" class="option">Personal Project</div>
+    </div>
+
+    <script>
+        function toggleOption() {
+            let university = document.getElementById("university");
+            let personal = document.getElementById("personal");
+
+            if (university.classList.contains("active")) {
+                university.classList.remove("active");
+                personal.classList.add("active");
+            } else {
+                university.classList.add("active");
+                personal.classList.remove("active");
+            }
+        }
+    </script>
+
+
   <!-- Contact Me section Start -->
 <section class="contact" id="contact">
   <div class="content">
