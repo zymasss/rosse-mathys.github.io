@@ -574,8 +574,8 @@ footer .text span a:hover{
 
 @media (max-width: 500px) {
   .main-container .image {
-        width: 80%;  /* Augmente la taille pour mieux s'adapter aux petits écrans */
-        height: 70%; /* Ajuste automatiquement la hauteur */
+        width: 100%;  /* Augmente la taille pour mieux s'adapter aux petits écrans */
+        height: 100%; /* Ajuste automatiquement la hauteur */
         border-radius: 50%; /* Garde un effet arrondi */
         margin-bottom: 20px;
     }
