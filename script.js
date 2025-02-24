@@ -76,5 +76,18 @@ window.onload =function(){
     typeWriter();
     changeColor();
 
-} 
+}
+
+
+
+/* test */
+
+function toggleOption() {
+    let university = document.getElementById("university");
+    let personal = document.getElementById("personal");
+
+    university.classList.toggle("active");
+    personal.classList.toggle("active");
+}
+
 
