@@ -592,7 +592,7 @@ footer .text span a:hover{
 
 /* menu déroulant skills */
 
-.certifications {
+..certifications {
   flex: 1;
   display: flex;
   align-items: center;
@@ -618,16 +618,25 @@ footer .text span a:hover{
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
+  padding: 10px;
 }
 
-.certification-card:hover {
-  transform: scale(1.05);
+/* Conteneur d'image pour garder un cadre fixe */
+.certification-card .image-container {
+  width: 100px;  /* Taille fixe du carré */
+  height: 100px; /* Taille fixe du carré */
+  margin: 0 auto; /* Centrer l'image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
+/* Image bien cadrée sans être déformée */
 .certification-card img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* L’image reste entière sans être coupée */
 }
 
 .certification-card p {
