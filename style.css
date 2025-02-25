@@ -611,7 +611,7 @@ footer .text span a:hover{
 }
 
 .certification-card {
-  min-width: 220px; /* Augmentation de la taille */
+  min-width: 200px; /* Augmentation de la taille */
   background: #b74b4b;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -627,8 +627,8 @@ footer .text span a:hover{
 
 /* Conteneur d'image pour garder un cadre fixe */
 .certification-card .image-container {
-  width: 120px;  /* Taille agrandie */
-  height: 120px; /* Taille agrandie */
+  width: 100px;  /* Taille agrandie */
+  height: 100px; /* Taille agrandie */
   margin: 0 auto; /* Centrer l'image */
   display: flex;
   align-items: center;
