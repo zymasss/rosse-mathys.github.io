@@ -541,75 +541,67 @@ footer .text span a:hover{
 /* menu déroulant skills */
 
 .certifications {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw; /* Barre de défilement sur toute la largeur de la page */
   overflow: hidden;
 }
 
 .certifications-carousel {
   display: flex;
-  gap: 15px; /* Espacement entre les cartes */
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px;
-  width: 100vw; /* Étend la barre de scroll sur toute la largeur */
-  justify-content: center; /* Centre les cartes dans le carrousel */
+  width: 100%;
+  max-width: 500px; /* Augmentation de la largeur max */
 }
 
 .certification-card {
-  min-width: 180px; /* Taille réduite des cartes */
-  max-width: 200px;
+  min-width: 200px; /* Augmentation de la taille */
   background: #b74b4b;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
-  padding: 15px;
+  padding: 20px; /* Augmentation de l'espace interne */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Conteneur d'image pour garder un carré fixe */
+/* Conteneur d'image pour garder un cadre fixe */
 .certification-card .image-container {
-  width: 90px; /* Taille identique pour toutes les images */
-  height: 90px;
-  margin: 0 auto;
+  width: 100px;  /* Taille agrandie */
+  height: 100px; /* Taille agrandie */
+  margin: 0 auto; /* Centrer l'image */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 5px;
-  background: white; /* Fond blanc pour bien cadrer les images */
 }
 
-/* Assurer une taille uniforme des images */
+/* Image bien cadrée sans être déformée */
 .certification-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Remplit le carré sans déformation */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* L’image reste entière sans être coupée */
 }
 
-/* Centrage et lisibilité du texte */
+/* Centrer et éviter les retours à la ligne */
 .certification-card p {
-  margin: 8px 0;
-  font-size: 14px;
+  margin: 10px 0;
+  font-size: 16px; /* Taille du texte augmentée */
   font-weight: bold;
   color: #333;
   text-align: center;
-  max-width: 90%;
-  word-wrap: break-word;
-  white-space: normal;
 }
 
-/* Personnalisation de la barre de défilement */
 .certifications-carousel::-webkit-scrollbar {
-  height: 8px; /* Barre plus visible */
-  width: 100vw; /* Défilement sur toute la largeur */
+  height: 5px;
 }
 
 .certifications-carousel::-webkit-scrollbar-thumb {
