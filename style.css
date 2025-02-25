@@ -330,59 +330,7 @@ section .button button{
     background-color: #fff;
     color: #b74b4b;
   }
-  
-  .skills{
-    background: black;
-    }
-  .skills .content{
-    padding: 40px 0;
-  }
-  .skills .skills-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
- .skills-details .text{
-   width: 50%;
-   }
-   .skills-details p{
-     color: white;
-     text-align: justify;
-     }
-     .skills .skills-details .experience{
-       display: flex;
-       align-items: center;
-       margin: 0 10px;
-       }
-.skills-details .experience .num{
-  color: white;
-  font-size: 80px;
-}
-.skills-details .experience .exp{
-  color: white;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 6px;
-}
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.skills-details .box{
-  width: calc(100% / 2 - 20px);
-  margin: 20px 0;
-}
-.skills-details .boxes .topic{
-  font-size: 20px;
-  color: #b74b4b;
-}
-.skills-details .boxes .per{
-  font-size: 60px;
-  color: #b74b4b;
-}
+
 
 .services .boxes{
   display: flex;
@@ -593,67 +541,75 @@ footer .text span a:hover{
 /* menu déroulant skills */
 
 .certifications {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw; /* Barre de défilement sur toute la largeur de la page */
   overflow: hidden;
 }
 
 .certifications-carousel {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Espacement entre les cartes */
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px;
-  width: 100%;
-  max-width: 500px; /* Augmentation de la largeur max */
+  width: 100vw; /* Étend la barre de scroll sur toute la largeur */
+  justify-content: center; /* Centre les cartes dans le carrousel */
 }
 
 .certification-card {
-  min-width: 200px; /* Augmentation de la taille */
+  min-width: 180px; /* Taille réduite des cartes */
+  max-width: 200px;
   background: #b74b4b;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
-  padding: 20px; /* Augmentation de l'espace interne */
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Conteneur d'image pour garder un cadre fixe */
+/* Conteneur d'image pour garder un carré fixe */
 .certification-card .image-container {
-  width: 100px;  /* Taille agrandie */
-  height: 100px; /* Taille agrandie */
-  margin: 0 auto; /* Centrer l'image */
+  width: 90px; /* Taille identique pour toutes les images */
+  height: 90px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 5px;
+  background: white; /* Fond blanc pour bien cadrer les images */
 }
 
-/* Image bien cadrée sans être déformée */
+/* Assurer une taille uniforme des images */
 .certification-card img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* L’image reste entière sans être coupée */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplit le carré sans déformation */
 }
 
-/* Centrer et éviter les retours à la ligne */
+/* Centrage et lisibilité du texte */
 .certification-card p {
-  margin: 10px 0;
-  font-size: 16px; /* Taille du texte augmentée */
+  margin: 8px 0;
+  font-size: 14px;
   font-weight: bold;
   color: #333;
   text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
+/* Personnalisation de la barre de défilement */
 .certifications-carousel::-webkit-scrollbar {
-  height: 5px;
+  height: 8px; /* Barre plus visible */
+  width: 100vw; /* Défilement sur toute la largeur */
 }
 
 .certifications-carousel::-webkit-scrollbar-thumb {
