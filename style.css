@@ -591,8 +591,7 @@ footer .text span a:hover{
 
 
 /* menu déroulant skills */
-
-..certifications {
+.certifications {
   flex: 1;
   display: flex;
   align-items: center;
@@ -639,11 +638,28 @@ footer .text span a:hover{
   object-fit: contain; /* L’image reste entière sans être coupée */
 }
 
+/* Style du titre */
+.certification-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; /* Couleur du titre */
+}
+
+/* Style du texte principal */
 .certification-card p {
-  margin: 10px 0;
   font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: #eee; /* Couleur du texte */
+  margin: 5px 0;
+}
+
+/* Style de la description */
+.certification-card .description {
+  font-size: 12px;
+  font-weight: normal;
+  color: #ddd; /* Couleur plus claire pour la description */
+  margin: 5px 10px 0 10px;
 }
 
 .certifications-carousel::-webkit-scrollbar {
@@ -658,5 +674,3 @@ footer .text span a:hover{
 .certifications-carousel::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
-
