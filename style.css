@@ -606,24 +606,28 @@ footer .text span a:hover{
   scroll-behavior: smooth;
   padding: 10px;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px; /* Augmentation de la largeur max */
 }
 
 .certification-card {
-  min-width: 180px;
+  min-width: 220px; /* Augmentation de la taille */
   background: #b74b4b;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
-  padding: 10px;
+  padding: 20px; /* Augmentation de l'espace interne */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Conteneur d'image pour garder un cadre fixe */
 .certification-card .image-container {
-  width: 100px;  /* Taille fixe du carré */
-  height: 100px; /* Taille fixe du carré */
+  width: 120px;  /* Taille agrandie */
+  height: 120px; /* Taille agrandie */
   margin: 0 auto; /* Centrer l'image */
   display: flex;
   align-items: center;
@@ -638,28 +642,14 @@ footer .text span a:hover{
   object-fit: contain; /* L’image reste entière sans être coupée */
 }
 
-/* Style du titre */
-.certification-card h3 {
-  margin: 10px 0 5px 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: white; /* Couleur du titre */
-}
-
-/* Style du texte principal */
+/* Centrer et éviter les retours à la ligne */
 .certification-card p {
-  font-size: 14px;
+  margin: 10px 0;
+  font-size: 16px; /* Taille du texte augmentée */
   font-weight: bold;
-  color: #eee; /* Couleur du texte */
-  margin: 5px 0;
-}
-
-/* Style de la description */
-.certification-card .description {
-  font-size: 12px;
-  font-weight: normal;
-  color: #ddd; /* Couleur plus claire pour la description */
-  margin: 5px 10px 0 10px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
 .certifications-carousel::-webkit-scrollbar {
