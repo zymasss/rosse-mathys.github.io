@@ -530,7 +530,7 @@ footer .text span a:hover{
 /* Conteneur des boîtes de certifications */
 .certification-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 /* Style des boîtes de certifications */
@@ -550,8 +550,8 @@ footer .text span a:hover{
 
 /* Effet au survol */
 .certification-box:hover {
-    transform: scale(1.05); /* Zoom léger */
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3); /* Ombre blanche légère */
+    transform: scale(1.1); /* Zoom léger */
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5); /* Ombre blanche légère */
 }
 
 /* Style des images des certifications */
