@@ -491,21 +491,7 @@ footer .text span a:hover{
     width: 50%;
       height: 60%;
   }
-  
-  .skills .skills-details{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .skills-details .text{
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .skills-details .boxes{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+
   .services .boxes .box{
     margin: 20px 0;
     width: 100%;
@@ -529,86 +515,54 @@ footer .text span a:hover{
     .main-container button{
         margin-top: 15px;
     }
-  
-  .skills-details .boxes .per{
-    font-size: 50px;
-    color: #b74b4b;
-  }
 }
 
 
 
-/* menu déroulant skills */
+/* certifs*/
 
-.certifications {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+#certifications {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
 }
 
-.certifications-carousel {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px;
-  width: 100%;
-  max-width: 500px; /* Augmentation de la largeur max */
+.certification-container {
+    display: flex;
+    gap: 20px;
 }
 
-.certification-card {
-  min-width: 200px; /* Augmentation de la taille */
-  background: #b74b4b;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
-  padding: 20px; /* Augmentation de l'espace interne */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.certification-box {
+    background-color: #b74b4b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Conteneur d'image pour garder un cadre fixe */
-.certification-card .image-container {
-  width: 100px;  /* Taille agrandie */
-  height: 100px; /* Taille agrandie */
-  margin: 0 auto; /* Centrer l'image */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.certification-box:hover {
+    transform: scale(1.05);
 }
 
-/* Image bien cadrée sans être déformée */
-.certification-card img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* L’image reste entière sans être coupée */
+.certification-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* Centrer et éviter les retours à la ligne */
-.certification-card p {
-  margin: 10px 0;
-  font-size: 16px; /* Taille du texte augmentée */
-  font-weight: bold;
-  color: #333;
-  text-align: center;
+.certification-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
 }
 
-.certifications-carousel::-webkit-scrollbar {
-  height: 5px;
-}
-
-.certifications-carousel::-webkit-scrollbar-thumb {
-  background: #b74b4b;
-  border-radius: 10px;
-}
-
-.certifications-carousel::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.certification-box p {
+    font-size: 14px;
 }
