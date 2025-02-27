@@ -36,7 +36,7 @@ body{
 nav{
   width: 100%;
   height: 10vh;
-  
+
 }
 
 .nav-container{
@@ -134,7 +134,7 @@ section{
   min-height: 90vh;
 }
 
-section .main-container{  
+section .main-container{
 
   display: flex;
   justify-content:space-between ;
@@ -142,16 +142,21 @@ section .main-container{
   align-items: center;
 }
 
-.main-container .image{
-  width: 500px;
-  height: 80vh;
-  border-radius: 100%;
-  overflow: hidden;
-  box-shadow: 0 0 50px #b74b4b;
+.main-container .image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;  /* 100% peut être remplacé par 50% pour éviter des coupures trop sévères */
+    overflow: hidden;
+    box-shadow: 0 0 50px #b74b4b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container .image img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main-container .image:hover{
@@ -162,11 +167,11 @@ section .main-container{
   0%{
       scale: 1;
   }
-  
+
   50%{
       scale: 1.05;
   }
-  
+
   100%{
       scale: 1;
   }
@@ -330,59 +335,7 @@ section .button button{
     background-color: #fff;
     color: #b74b4b;
   }
-  
-  .skills{
-    background: black;
-    }
-  .skills .content{
-    padding: 40px 0;
-  }
-  .skills .skills-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
- .skills-details .text{
-   width: 50%;
-   }
-   .skills-details p{
-     color: white;
-     text-align: justify;
-     }
-     .skills .skills-details .experience{
-       display: flex;
-       align-items: center;
-       margin: 0 10px;
-       }
-.skills-details .experience .num{
-  color: white;
-  font-size: 80px;
-}
-.skills-details .experience .exp{
-  color: white;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 6px;
-}
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.skills-details .box{
-  width: calc(100% / 2 - 20px);
-  margin: 20px 0;
-}
-.skills-details .boxes .topic{
-  font-size: 20px;
-  color: #b74b4b;
-}
-.skills-details .boxes .per{
-  font-size: 60px;
-  color: #b74b4b;
-}
+
 
 .services .boxes{
   display: flex;
@@ -516,48 +469,35 @@ footer .text span a:hover{
     display: flex;
     flex-direction: column;
   }
-  
+
   .nav-container .links{
     display: none;
   }
-  
+
   .hamburg,
   .cancel{
     opacity: 1;
     pointer-events: visible;
   }
-  
+
   .main-container .content{
     margin-top: 20px;
       width: 80%;
   }
-  
+
   .social-links i{
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.5rem;
   }
-  
+
   .main-container .image{
     z-index: -1;
     width: 50%;
       height: 60%;
   }
-  
-  .skills .skills-details{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .skills-details .text{
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .skills-details .boxes{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+
+
   .services .boxes .box{
     margin: 20px 0;
     width: 100%;
@@ -567,24 +507,150 @@ footer .text span a:hover{
 }
 }
 
-@media (max-width: 500px){
-  main-container .image{
-        width: 50%;
-        height: 60%;
-        margin-bottom: 0px;
+@media (max-width: 500px) {
+  .main-container .image {
+        width: 100%;  /* Augmente la taille pour mieux s'adapter aux petits écrans */
+        height: 100%; /* Ajuste automatiquement la hauteur */
+        border-radius: 50%; /* Garde un effet arrondi */
+        margin-bottom: 20px;
     }
-    
-    .main-container .content{
-        width: 80%;
+
+    .main-container .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Évite les coupures et déformations */
     }
-    
-    .main-container button{
+
+    .main-container .content {
+        width: 90%;
+    }
+
+    .main-container button {
         margin-top: 15px;
     }
+
+ 
   
-  .skills-details .boxes .per{
-    font-size: 50px;
-    color: #b74b4b;
-  }
+
+    .skills-details .boxes .per {
+        font-size: 50px;
+        color: #b74b4b;
+    }
 }
 
+/* Bouton univ et perso */
+
+.toggle-btn {
+    display: flex;
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid #b74b4b;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.active {
+    background: #b74b4b;
+    color: black;
+}
+
+
+
+/* certifs*/
+/* Conteneur principal des certifications */
+#certifications {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Conteneur des boîtes de certifications */
+.certification-container {
+    display: flex;
+    gap: 25px;
+}
+
+/* Style des boîtes de certifications */
+.certification-box {
+    background-color: #b74b4b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.certification-box:hover {
+    transform: scale(1.1); /* Zoom léger */
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5); /* Ombre blanche légère */
+}
+
+/* Style des images des certifications */
+.certification-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Style du titre de la certification */
+.certification-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Style du texte de description */
+.certification-box p {
+    font-size: 14px;
+}
+
+section {
+    margin-bottom: 50px; /* Ajoute un espace en bas de chaque section */
+}
+
+/* Responsive : Réduction des certifications sur téléphone */
+@media screen and (max-width: 768px) {
+    .certification-container {
+        flex-direction: column; /* Empile les certifications en colonne */
+        align-items: center; /* Centre les éléments */
+        gap: 15px; /* Réduit l'espace entre les certifications */
+    }
+
+    .certification-box {
+        width: 80%; /* Réduit la largeur à 80% de l'écran */
+        padding: 15px; /* Réduit l'espace interne */
+    }
+
+    .certification-box img {
+        width: 120px; /* Réduit la taille des images */
+        height: 120px;
+    }
+
+    .certification-box h3 {
+        font-size: 16px; /* Réduit la taille du texte */
+    }
+
+    .certification-box p {
+        font-size: 12px; /* Ajuste la description */
+    }
+}
