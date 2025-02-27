@@ -336,58 +336,6 @@ section .button button{
     color: #b74b4b;
   }
 
-  .skills{
-    background: black;
-    }
-  .skills .content{
-    padding: 40px 0;
-  }
-  .skills .skills-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
- .skills-details .text{
-   width: 50%;
-   }
-   .skills-details p{
-     color: white;
-     text-align: justify;
-     }
-     .skills .skills-details .experience{
-       display: flex;
-       align-items: center;
-       margin: 0 10px;
-       }
-.skills-details .experience .num{
-  color: white;
-  font-size: 80px;
-}
-.skills-details .experience .exp{
-  color: white;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 6px;
-}
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.skills-details .box{
-  width: calc(100% / 2 - 20px);
-  margin: 20px 0;
-}
-.skills-details .boxes .topic{
-  font-size: 20px;
-  color: #b74b4b;
-}
-.skills-details .boxes .per{
-  font-size: 60px;
-  color: #b74b4b;
-}
 
 .services .boxes{
   display: flex;
@@ -549,20 +497,7 @@ footer .text span a:hover{
       height: 60%;
   }
 
-  .skills .skills-details{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .skills-details .text{
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .skills-details .boxes{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+
   .services .boxes .box{
     margin: 20px 0;
     width: 100%;
@@ -593,6 +528,8 @@ footer .text span a:hover{
     .main-container button {
         margin-top: 15px;
     }
+
+ 
   
 
     .skills-details .boxes .per {
@@ -630,3 +567,90 @@ footer .text span a:hover{
     color: black;
 }
 
+
+
+/* certifs*/
+/* Conteneur principal des certifications */
+#certifications {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Conteneur des boîtes de certifications */
+.certification-container {
+    display: flex;
+    gap: 25px;
+}
+
+/* Style des boîtes de certifications */
+.certification-box {
+    background-color: #b74b4b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.certification-box:hover {
+    transform: scale(1.1); /* Zoom léger */
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5); /* Ombre blanche légère */
+}
+
+/* Style des images des certifications */
+.certification-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Style du titre de la certification */
+.certification-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Style du texte de description */
+.certification-box p {
+    font-size: 14px;
+}
+
+section {
+    margin-bottom: 50px; /* Ajoute un espace en bas de chaque section */
+}
+
+/* Responsive : Réduction des certifications sur téléphone */
+@media screen and (max-width: 768px) {
+    .certification-container {
+        flex-direction: column; /* Empile les certifications en colonne */
+        align-items: center; /* Centre les éléments */
+        gap: 15px; /* Réduit l'espace entre les certifications */
+    }
+
+    .certification-box {
+        width: 80%; /* Réduit la largeur à 80% de l'écran */
+        padding: 15px; /* Réduit l'espace interne */
+    }
+
+    .certification-box img {
+        width: 120px; /* Réduit la taille des images */
+        height: 120px;
+    }
+
+    .certification-box h3 {
+        font-size: 16px; /* Réduit la taille du texte */
+    }
+
+    .certification-box p {
+        font-size: 12px; /* Ajuste la description */
+    }
+}
