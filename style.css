@@ -577,3 +577,30 @@ footer .text span a:hover{
 section {
     margin-bottom: 50px; /* Ajoute un espace en bas de chaque section */
 }
+
+/* Responsive : Réduction des certifications sur téléphone */
+@media screen and (max-width: 768px) {
+    .certification-container {
+        flex-direction: column; /* Empile les certifications en colonne */
+        align-items: center; /* Centre les éléments */
+        gap: 15px; /* Réduit l'espace entre les certifications */
+    }
+
+    .certification-box {
+        width: 80%; /* Réduit la largeur à 80% de l'écran */
+        padding: 15px; /* Réduit l'espace interne */
+    }
+
+    .certification-box img {
+        width: 120px; /* Réduit la taille des images */
+        height: 120px;
+    }
+
+    .certification-box h3 {
+        font-size: 16px; /* Réduit la taille du texte */
+    }
+
+    .certification-box p {
+        font-size: 12px; /* Ajuste la description */
+    }
+}
