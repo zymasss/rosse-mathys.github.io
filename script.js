@@ -88,7 +88,3 @@ function toggleOption() {
     university.classList.toggle("active");
     personal.classList.toggle("active");
 }
-
-
-
-
